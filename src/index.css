@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiss Design System - Clean, Minimal, Functional */
+
+@layer base {
+  :root {
+    /* Swiss Design Color Palette */
+    --background: 0 0% 96%; /* #F5F5F5 Gris claro */
+    --foreground: 240 100% 27%; /* #000088 Azul oscuro */
+
+    --card: 0 0% 100%; /* Blanco puro */
+    --card-foreground: 240 100% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 100% 27%;
+
+    --primary: 240 100% 27%; /* #000088 Azul oscuro */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 209 36% 70%; /* #9FB4C7 Azul grisáceo */
+    --secondary-foreground: 240 100% 27%;
+
+    --muted: 0 0% 93%; /* Gris muy claro */
+    --muted-foreground: 240 50% 40%;
+
+    --accent: 209 36% 70%; /* #9FB4C7 Azul grisáceo acento */
+    --accent-foreground: 240 100% 27%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 88%; /* Bordes sutiles */
+    --input: 0 0% 88%;
+    --ring: 240 100% 27%;
+
+    --radius: 0.25rem; /* Bordes más rectos, típico del diseño suizo */
+
+    /* Swiss Design Tokens - Minimal & Functional */
+    --gradient-hero: linear-gradient(180deg, hsl(240 100% 27%) 0%, hsl(209 36% 70%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.1);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-large: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
+    --transition-smooth: all 0.2s ease;
+  }
+
+  .dark {
+    --background: 240 100% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 80% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 80% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 209 36% 70%;
+    --primary-foreground: 240 100% 27%;
+
+    --secondary: 240 50% 30%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 30% 25%;
+    --muted-foreground: 209 36% 70%;
+
+    --accent: 209 36% 70%;
+    --accent-foreground: 240 100% 27%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 30% 25%;
+    --input: 240 30% 25%;
+    --ring: 209 36% 70%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(240 80% 15%) 0%, hsl(209 36% 30%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(240 80% 15%) 0%, hsl(240 80% 20%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Swiss Design Typography */
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    letter-spacing: -0.011em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
