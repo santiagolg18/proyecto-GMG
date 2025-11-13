@@ -213,13 +213,12 @@ const Hero = () => {
 
           // 27 palabras relacionadas con limpieza, valores y servicios
           const words = [
-            'Higiene', 'Brillo', 'Pureza', 'Confianza',
+            'Higiene', 'Confianza',
             'Frescura', 'Cuidado', 'Calidad', 'Profesionalismo',
-            'Excelencia', 'Limpieza', 'Impecable', 'Resplandor',
+            'Excelencia', 'Limpieza', 'Impecable',
             'Orden', 'Compromiso', 'Detalle', 'Eficiencia',
             'Transparencia', 'Dedicación', 'Integridad', 'Pulcritud',
-            'Responsabilidad', 'Esmero', 'Perfección', 'Distinción',
-            'Saneamiento', 'Desinfección', 'Esplendor'
+            'Responsabilidad', 'Perfección', 'Desinfección'
           ];
           this.text = p.random(words);
 
@@ -358,7 +357,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="inicio" className="relative h-screen w-full overflow-hidden">
+    <section id="inicio" className="relative min-h-screen w-full overflow-hidden pt-20 md:pt-28">
       {/* Background image - positioned to avoid navbar overlap */}
       <img
         src={heroImage}
@@ -366,25 +365,31 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover object-center"
         style={{ zIndex: 0, objectPosition: 'center 30%' }}
       />
-      
+
+      {/* Degradado sutil en la parte inferior */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white/80 to-transparent pointer-events-none"
+        style={{ zIndex: 0 }}
+      />
+
       {/* P5.js canvas overlay with floating bubbles animation */}
       <div ref={canvasRef} className="absolute inset-0" style={{ zIndex: 1, pointerEvents: 'auto' }} />
       
       {/* Content - Two Column Layout */}
-      <div className="container mx-auto px-4 md:px-8 h-full flex items-center relative" style={{ zIndex: 2, pointerEvents: 'auto' }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full items-center pt-32 pb-8">
+      <div className="container mx-auto px-4 md:px-8 min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-7rem)] flex items-center relative" style={{ zIndex: 2, pointerEvents: 'auto' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 w-full items-center py-8">
 
           {/* Left Column - Text Content */}
-          <div className="text-center lg:text-left text-white animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 drop-shadow-lg tracking-tight leading-tight">
+          <div className="text-center lg:text-left animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 tracking-tight leading-tight text-blue-950">
               {heroTitle}
               <br />
-              <span className="text-secondary">{heroSubtitle}</span>
+              <span className="text-blue-600">{heroSubtitle}</span>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl mb-6 drop-shadow-md leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 leading-relaxed text-gray-800 font-medium">
               {heroDescription}
             </p>
-            <p className="text-sm md:text-base opacity-90 font-light tracking-wide mb-8 lg:mb-0">
+            <p className="text-xs sm:text-sm md:text-base font-medium tracking-wide mb-6 lg:mb-0 text-gray-700">
               Pasa el cursor sobre las burbujas para descubrir nuestros valores
             </p>
           </div>

@@ -147,7 +147,7 @@ const Services = () => {
             {services.map((service, index) => (
             <div
               key={service.id || index}
-              className="group relative overflow-hidden rounded-sm shadow-medium hover:shadow-large transition-all duration-300 h-[420px] cursor-pointer"
+              className="group relative overflow-hidden rounded-sm shadow-md hover:shadow-xl transition-all duration-300 h-[420px] cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Imagen de fondo */}
@@ -157,8 +157,8 @@ const Services = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
 
-              {/* Overlay oscuro con colores Swiss */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30 group-hover:from-primary/95 group-hover:via-primary/80 group-hover:to-secondary/60 transition-all duration-300" />
+              {/* Overlay más claro para que las imágenes se vean mejor */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-primary/95 group-hover:via-primary/80 group-hover:to-secondary/60 transition-all duration-300" />
 
               {/* Contenido inicial (visible por defecto) */}
               <div className="absolute inset-0 p-8 flex flex-col justify-end text-white transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">

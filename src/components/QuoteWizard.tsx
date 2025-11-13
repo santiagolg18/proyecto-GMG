@@ -196,7 +196,7 @@ export default function QuoteWizard() {
                     className={cn(
                       "p-6 rounded-sm border-2 transition-all duration-300 text-left hover:scale-105",
                       formData.serviceType === service.id
-                        ? "border-secondary bg-secondary/20 shadow-large"
+                        ? "border-primary bg-primary/10 shadow-lg"
                         : "border-primary/30 bg-primary/5 backdrop-blur-sm hover:border-primary/50"
                     )}
                   >
@@ -232,7 +232,7 @@ export default function QuoteWizard() {
                   className={cn(
                     "p-6 rounded-sm border-2 transition-all duration-300 hover:scale-105",
                     formData.spaceSize === size.id
-                      ? "border-secondary bg-secondary/20 shadow-large"
+                      ? "border-primary bg-primary/10 shadow-lg"
                       : "border-primary/30 bg-primary/5 backdrop-blur-sm hover:border-primary/50"
                   )}
                 >
@@ -267,7 +267,7 @@ export default function QuoteWizard() {
                   className={cn(
                     "p-6 rounded-sm border-2 transition-all duration-300 hover:scale-105 relative",
                     formData.frequency === freq.id
-                      ? "border-secondary bg-secondary/20 shadow-large"
+                      ? "border-primary bg-primary/10 shadow-lg"
                       : "border-primary/30 bg-primary/5 backdrop-blur-sm hover:border-primary/50"
                   )}
                 >
