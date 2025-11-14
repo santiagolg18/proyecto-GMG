@@ -7,29 +7,29 @@ const About = () => {
   // Array de fotos del equipo y empresa (URLs de ejemplo - reemplazar con fotos reales)
   const teamPhotos = [
     {
-      url: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+      url: "https://res.cloudinary.com/dqnsskjfg/image/upload/v1763139795/5_e8wzl0.webp",
       title: "Nuestro Equipo",
       description: "Personal capacitado y profesional"
     },
     {
-      url: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&h=600&fit=crop",
+      url: "https://res.cloudinary.com/dqnsskjfg/image/upload/v1763139795/2_wt52gu.webp",
       title: "En Acción",
       description: "Compromiso con la excelencia"
     },
     {
-      url: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&h=600&fit=crop",
+      url: "https://images.unsplash.com/photo-1758599669327-83d310882929?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Resultados Impecables",
       description: "Garantía de satisfacción"
     },
     {
-      url: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+      url: "https://res.cloudinary.com/dqnsskjfg/image/upload/v1763139795/4_qt4bvm.webp",
       title: "Equipo Profesional",
       description: "Más de 10 años de experiencia"
     }
   ];
 
   // URL del video (reemplazar con el video real del equipo)
-  const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Ejemplo - reemplazar
+  const videoUrl = "https://youtu.be/xpqQicIliZc"; // Ejemplo - reemplazar
 
   const features = [
     "Personal capacitado y certificado",

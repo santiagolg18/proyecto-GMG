@@ -18,7 +18,7 @@ const Navbar = () => {
 
   // Valores fijos
   const logoUrl = 'https://res.cloudinary.com/dqnsskjfg/image/upload/v1762199163/LOGO_MAURICIO-cropped_tarloq.svg';
-  const facebookUrl = 'https://facebook.com/tupagina';
+  const facebookUrl = 'https://www.facebook.com/profile.php?id=100094356541894';
   const tiktokUrl = 'https://tiktok.com/@tupagina';
 
   const scrollToSection = (id: string) => {

@@ -39,7 +39,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Síguenos</h3>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100094356541894"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full transition-colors"
@@ -54,14 +54,7 @@ const Footer = () => {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
+              
             </div>
           </div>
         </div>

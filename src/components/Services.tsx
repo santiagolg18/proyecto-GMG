@@ -177,8 +177,17 @@ const Services = () => {
                 <h3 className="text-2xl font-semibold mb-3 tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-sm text-white/90 leading-relaxed">
+                <p className="text-sm text-white/90 leading-relaxed mb-4">
                   {service.description}
+                </p>
+                {/* Price Badge - Yellow Highlight */}
+                <div className="inline-flex items-center justify-center bg-secondary/90 backdrop-blur-sm px-4 py-2 rounded-sm">
+                  <p className="text-base font-bold text-primary">
+                    {service.price}
+                  </p>
+                </div>
+                <p className="text-xs text-white/80 mt-2 italic">
+                  ¡Pasa el cursor para ver más detalles!
                 </p>
               </div>
 
@@ -191,15 +200,21 @@ const Services = () => {
                 <div className="space-y-3 mb-6">
                   {service.details.map((detail, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
                       <span className="text-sm leading-relaxed">{detail}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-auto pt-5 border-t border-white/40">
-                  <p className="text-lg font-medium text-center">
-                    {service.price}
+                <div className="mt-auto pt-4">
+                  {/* Price Badge with Yellow Highlight */}
+                  <div className="flex items-center justify-center bg-secondary/95 backdrop-blur-sm px-5 py-3 rounded-sm mb-3">
+                    <p className="text-xl font-bold text-primary">
+                      {service.price}
+                    </p>
+                  </div>
+                  <p className="text-sm text-center text-white/90 font-medium">
+                    ¡Solicita tu cotización ahora!
                   </p>
                 </div>
               </div>

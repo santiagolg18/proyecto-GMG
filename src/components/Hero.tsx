@@ -7,10 +7,10 @@ const Hero = () => {
   const p5Instance = useRef<p5 | null>(null);
 
   // Valores fijos del Hero
-  const heroTitle = 'Limpieza que se siente';
-  const heroSubtitle = 'desde la primera impresión';
-  const heroDescription = 'Servicios profesionales de aseo para tu hogar u oficina.';
-  const heroImage = 'https://images.unsplash.com/photo-1583907659441-addbe699e921?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  const heroTitle = 'Transformamos espacios';
+  const heroSubtitle = 'Creamos bienestar';
+  const heroDescription = 'Servicios profesionales de aseo para tu empresa, hogar u oficina.';
+  const heroImage = 'https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   useEffect(() => {
     if (!canvasRef.current) return;
 
@@ -372,16 +372,16 @@ const Hero = () => {
 
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 tracking-tight leading-tight text-blue-950">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 tracking-tight leading-tight text-white">
               {heroTitle}
-              <br />
+              <br/>
               <span className="text-blue-600">{heroSubtitle}</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 leading-relaxed text-gray-800 font-medium">
               {heroDescription}
             </p>
             <p className="text-xs sm:text-sm md:text-base font-medium tracking-wide mb-6 lg:mb-0 text-gray-700">
-              Pasa el cursor sobre las burbujas para descubrir nuestros valores
+              ✨Pasa el cursor sobre las burbujas para descubrir nuestros valores✨
             </p>
           </div>
 
