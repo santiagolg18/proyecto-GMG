@@ -40,9 +40,9 @@
     /* Swiss Design Tokens - Minimal & Functional */
     --gradient-hero: linear-gradient(180deg, hsl(240 100% 27%) 0%, hsl(209 36% 70%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --shadow-soft: 0 1px 3px 0 hsl(43 100% 50% / 0.15);
-    --shadow-medium: 0 4px 6px -1px hsl(43 100% 50% / 0.2);
-    --shadow-large: 0 10px 15px -3px hsl(43 100% 50% / 0.25);
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.1);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-large: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
     --transition-smooth: all 0.2s ease;
   }
 

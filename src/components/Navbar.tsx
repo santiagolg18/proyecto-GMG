@@ -1,6 +1,4 @@
 import { Facebook, Menu, X } from "lucide-react";
-import { useCMSData } from "@/hooks/useCMSData";
-import { getSetting } from "@/services/cms";
 import { useState } from "react";
 
 // TikTok Icon Component
@@ -16,17 +14,12 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 );
 
 const Navbar = () => {
-  const { data } = useCMSData();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Get logo and social media URLs from settings with fallbacks
-  const logoUrl = getSetting(
-    data?.settings || {},
-    'logoUrl',
-    'https://res.cloudinary.com/dqnsskjfg/image/upload/v1762199163/LOGO_MAURICIO-cropped_tarloq.svg'
-  );
-  const facebookUrl = getSetting(data?.settings || {}, 'facebookUrl', 'https://facebook.com');
-  const tiktokUrl = getSetting(data?.settings || {}, 'tiktokUrl', 'https://tiktok.com');
+  // Valores fijos
+  const logoUrl = 'https://res.cloudinary.com/dqnsskjfg/image/upload/v1762199163/LOGO_MAURICIO-cropped_tarloq.svg';
+  const facebookUrl = 'https://facebook.com/tupagina';
+  const tiktokUrl = 'https://tiktok.com/@tupagina';
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);

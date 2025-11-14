@@ -114,13 +114,25 @@ const Services = () => {
   return (
     <section id="servicios" className="py-24 bg-background">
       <div className="container mx-auto px-8">
-        <div className="text-center mb-20 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary mb-6 tracking-tight">
-            Nuestros Servicios
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Ofrecemos una amplia gama de servicios de limpieza adaptados a tus necesidades
-          </p>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-20 animate-fade-in">
+          {/* Cleaner Image */}
+          <div className="flex-shrink-0">
+            <img
+              src="https://res.cloudinary.com/dqnsskjfg/image/upload/v1763080219/FOTO_HERO_OPTIMA_mftw77.png"
+              alt="Profesional de limpieza GMG"
+              className="w-48 h-48 md:w-64 md:h-64 object-cover"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="text-center md:text-left max-w-2xl">
+            <h2 className="text-4xl md:text-5xl font-semibold text-primary mb-6 tracking-tight">
+              Nuestros Servicios
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Ofrecemos una amplia gama de servicios de limpieza adaptados a tus necesidades
+            </p>
+          </div>
         </div>
 
         {/* Loading State - only show on initial load */}
@@ -143,7 +155,7 @@ const Services = () => {
 
         {/* Services Grid - always show if we have data or error (fallback) */}
         {!showLoading && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {services.map((service, index) => (
             <div
               key={service.id || index}

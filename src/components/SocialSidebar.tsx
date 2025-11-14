@@ -23,20 +23,20 @@ const SocialSidebar = () => {
   const mailtoUrl = `mailto:${email}?subject=Cotizacion desde la Web`;
 
   return (
-    <div className="hidden md:flex fixed right-4 lg:right-6 top-1/2 -translate-y-1/2 z-40 flex-col gap-3">
+    <div className="fixed right-2 md:right-4 lg:right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2 md:gap-3">
       {/* WhatsApp */}
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center justify-center w-14 h-14 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+        className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
         style={{ backgroundColor: '#25D366' }}
         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#128C7E'}
         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#25D366'}
         aria-label="Contactar por WhatsApp"
       >
-        <WhatsAppIcon className="w-7 h-7 text-white" />
-        <span className="absolute right-full mr-3 px-3 py-1.5 text-white text-sm font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none" style={{ backgroundColor: '#128C7E' }}>
+        <WhatsAppIcon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+        <span className="hidden md:block absolute right-full mr-3 px-3 py-1.5 text-white text-sm font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none" style={{ backgroundColor: '#128C7E' }}>
           WhatsApp
         </span>
       </a>
@@ -44,11 +44,11 @@ const SocialSidebar = () => {
       {/* Email */}
       <a
         href={mailtoUrl}
-        className="group relative flex items-center justify-center w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+        className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
         aria-label="Enviar correo"
       >
-        <Mail className="w-6 h-6 text-white" />
-        <span className="absolute right-full mr-3 px-3 py-1.5 bg-blue-950 text-white text-sm font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+        <Mail className="w-5 h-5 md:w-6 md:h-6 text-white" />
+        <span className="hidden md:block absolute right-full mr-3 px-3 py-1.5 bg-blue-950 text-white text-sm font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
           Correo
         </span>
       </a>
@@ -58,11 +58,11 @@ const SocialSidebar = () => {
         href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center justify-center w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+        className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
         aria-label="Visitar Facebook"
       >
-        <Facebook className="w-6 h-6 text-white" />
-        <span className="absolute right-full mr-3 px-3 py-1.5 bg-blue-950 text-white text-sm font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+        <Facebook className="w-5 h-5 md:w-6 md:h-6 text-white" />
+        <span className="hidden md:block absolute right-full mr-3 px-3 py-1.5 bg-blue-950 text-white text-sm font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
           Facebook
         </span>
       </a>

@@ -1,25 +1,16 @@
 import { useEffect, useRef } from "react";
 import p5 from "p5";
-import { useCMSData } from "@/hooks/useCMSData";
-import { getSetting } from "@/services/cms";
 import QuoteWizard from "./QuoteWizard";
 
 const Hero = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
   const p5Instance = useRef<p5 | null>(null);
-  const { data } = useCMSData();
 
-  // Get configurable text and image from CMS settings
-  const heroTitle = getSetting(data?.settings || {}, 'heroTitle', 'Limpieza que se siente');
-  const heroSubtitle = getSetting(data?.settings || {}, 'heroSubtitle', 'desde la primera impresión');
-  const heroDescription = getSetting(data?.settings || {}, 'heroDescription', 'Servicios profesionales de aseo para tu hogar u oficina.');
-  const heroButtonText = getSetting(data?.settings || {}, 'heroButtonText', 'Solicita tu cotización');
-  const heroImage = getSetting(
-    data?.settings || {},
-    'heroImage',
-    'https://res.cloudinary.com/dqnsskjfg/image/upload/v1762156029/HERO_TIO_SII_1_mhunqe.png'
-  );
-
+  // Valores fijos del Hero
+  const heroTitle = 'Limpieza que se siente';
+  const heroSubtitle = 'desde la primera impresión';
+  const heroDescription = 'Servicios profesionales de aseo para tu hogar u oficina.';
+  const heroImage = 'https://images.unsplash.com/photo-1583907659441-addbe699e921?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   useEffect(() => {
     if (!canvasRef.current) return;
 
